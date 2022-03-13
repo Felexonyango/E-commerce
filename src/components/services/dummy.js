@@ -17,7 +17,7 @@ const PRODUCTS = [
 {
     id: 102,
     name: 'SweetHome Cupcake',
-    price: 2,
+    price: 200,
     image: require('../../../assets/products/cake-102.jpg'),
     description: 'A cupcake (also British English: fairy cake; Hiberno-English: bun; Australian English: fairy cake or patty cake[1]) is a small cake designed to serve one person.'
 }

@@ -72,15 +72,21 @@ export default function App() {
   const Auth =()=>{
     return(
 
-      <AuthStack.Navigator 
-      screenOptions={{ headerShown: true }}
-      >
+      <AuthStack.Navigator
+      screenOptions={{
+        headerTitleStyle: {
+          fontWeight: 'bold',
+          textAlign: 'center',
+          alignSelf: 'center',
+          flex: 1,
+        }
+    }}>
       <AuthStack.Screen 
-      name='Login'
-      component={LoginScreen}/>
-      <AuthStack.Screen
        name='Registration'
-       component={RegistrationScreen}/>
+      component={RegistrationScreen}/>
+      <AuthStack.Screen
+       name='Login'
+       component={LoginScreen}/>
       </AuthStack.Navigator>
   
     )
