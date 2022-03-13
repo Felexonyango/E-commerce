@@ -42,7 +42,14 @@ export function CartProvider(props) {
   
   return (
     <CartContext.Provider 
-      value={{items, setItems, getItemsCount, addItemToCart, getTotalPrice}}>
+    value={{
+      items,
+       setItems, 
+       getItemsCount, 
+       addItemToCart, 
+       getTotalPrice
+       
+       }}>
       {props.children}
     </CartContext.Provider>
   );
