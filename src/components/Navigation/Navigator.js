@@ -73,10 +73,14 @@ export default function App() {
     return(
 
       <AuthStack.Navigator 
-      screenOptions={{ headerShown: false }}
+      screenOptions={{ headerShown: true }}
       >
-      <AuthStack.Screen name='Login'component={LoginScreen}/>
-      <AuthStack.Screen name='Registration'component={RegistrationScreen}/>
+      <AuthStack.Screen 
+      name='Login'
+      component={LoginScreen}/>
+      <AuthStack.Screen
+       name='Registration'
+       component={RegistrationScreen}/>
       </AuthStack.Navigator>
   
     )
@@ -112,6 +116,6 @@ export default function App() {
 } 
 const styles = StyleSheet.create({
   headerTitle:{
-    fontSize:14
+    fontSize:20
   }
 });
