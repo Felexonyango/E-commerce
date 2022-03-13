@@ -30,7 +30,16 @@ export default function App() {
   }
   const ProductStack = () => {
     return (
-      <Stack.Navigator>
+      <Stack.Navigator
+      screenOptions={{
+        headerTitleStyle: {
+          fontWeight: 'bold',
+          textAlign: 'center',
+          alignSelf: 'center',
+          flex: 1,
+        }
+    }}>
+        
       <Stack.Screen name='Products'
        component={ProductsList} 
       options={({ navigation }) => ({
@@ -67,7 +76,7 @@ export default function App() {
       screenOptions={{ headerShown: false }}
       >
       <AuthStack.Screen name='Login'component={LoginScreen}/>
-      <AppStack.Screen name='Registration'component={RegistrationScreen}/>
+      <AuthStack.Screen name='Registration'component={RegistrationScreen}/>
       </AuthStack.Navigator>
   
     )

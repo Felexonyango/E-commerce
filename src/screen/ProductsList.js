@@ -1,11 +1,25 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState,useLayoutEffect} from 'react';
 import { View, Text, FlatList, StyleSheet } from 'react-native';
-
+import MenuImage from "../components/MenuImage/MenuImage";
 import { Product } from '../components/Product';
 import { getProducts } from '../components/services/dummy';
 
 export function ProductsList ({navigation}) {
 
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      headerLeft: () => (
+        <MenuImage
+          onPress={() => {
+            navigation.openDrawer();
+          }}
+        />
+      ),
+      headerRight: () => <View />,
+    });
+  }, []);
+
+  
   function renderProduct({item: product}) {
     return (
       <Product {...product} 
@@ -17,6 +31,7 @@ export function ProductsList ({navigation}) {
       />
     );
   }
+
   
   const [products, setProducts] = useState([]);
   
