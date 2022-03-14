@@ -3,11 +3,12 @@ import { View, Text, Button, FlatList, StyleSheet } from 'react-native';
 
 import { CartContext } from '../context/Cart/CartContext';
 
+
 export function Cart ({navigation}) {
 
   const {items, getItemsCount, getTotalPrice} = useContext(CartContext);
   
-  function Totals() {
+  function Totals(props) {
     let [total, setTotal] = useState(0);
     useEffect(() => {
       setTotal(getTotalPrice());
@@ -16,6 +17,7 @@ export function Cart ({navigation}) {
        <View style={styles.cartLineTotal}>
           <Text style={[styles.lineLeft, styles.lineTotal]}>Total</Text>
           <Text style={styles.lineRight}>$ {total}</Text>
+          {/* <Payment total={props.total}/> */}
        </View>
     );
   }
@@ -25,11 +27,16 @@ export function Cart ({navigation}) {
        <View style={styles.cartLine}>
           <Text style={styles.lineLeft}>{item.product.name} x {item.qty}</Text>
           <Text style={styles.lineRight}>$ {item.totalPrice}</Text>
+         
        </View>
     );
   }
+
+
+
   
   return (
+    <View>
     <FlatList
       style={styles.itemsList}
       contentContainerStyle={styles.itemsListContainer}
@@ -37,8 +44,14 @@ export function Cart ({navigation}) {
       renderItem={renderItem}
       keyExtractor={(item) => item.product.id.toString()}
       ListFooterComponent={Totals}
+      
+      
     />
+ {/* <Pay/> */}
+ 
+    </View>
   );
+
 }
 
 const styles = StyleSheet.create({

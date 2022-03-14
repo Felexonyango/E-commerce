@@ -70,6 +70,11 @@ export default function LoginScreen({navigation}) {
                     onPress={() => handleSignIn(email,password)}>
                     <Text style={styles.buttonTitle}>Log in</Text>
                 </TouchableOpacity>
+                <TouchableOpacity
+          style={{  marginVertical: 15}}
+          onPress={() => navigation.navigate('Forgot')}>
+          <Text style={{fontSize:14}}>Forgot Password ?</Text>
+        </TouchableOpacity>
                 <View style={styles.footerView}>
                     <Text style={styles.footerText}>Don't have an account? <Text onPress={onFooterLinkPress} style={styles.footerLink}>Sign up</Text></Text>
                 </View>

@@ -12,6 +12,9 @@ import LoginScreen from "../../screen/Auth/LoginScreen"
 import { ProductDetails } from '../../screen/ProductDetails';
 import { Cart } from '../../screen/Cart';
 import { CartIcon } from '../CartIcon';
+import {Account} from "../../screen/Account/Account"
+import Forgot from "../../screen/Auth/Forgot"
+import {Setting} from "../../screen/settings/Setting"
 
 
 LogBox.ignoreLogs([
@@ -62,6 +65,19 @@ export default function App() {
         headerTitleStyle: styles.headerTitle,
         headerRight: () => <CartIcon navigation={navigation}/>,
       })} />
+      <Stack.Screen 
+      name='Account' 
+      component={Account}>
+        
+        </Stack.Screen> 
+        <Stack.Screen 
+      name='Setting' 
+      component={Setting}>
+        
+        </Stack.Screen> 
+     
+       
+    
     </Stack.Navigator>
       
  
@@ -87,6 +103,9 @@ export default function App() {
       <AuthStack.Screen
        name='Login'
        component={LoginScreen}/>
+             <AuthStack.Screen
+       name='Forgot'
+       component={Forgot}/>
       </AuthStack.Navigator>
   
     )

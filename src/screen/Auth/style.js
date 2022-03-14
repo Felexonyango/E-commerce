@@ -54,5 +54,10 @@ export default StyleSheet.create({
         color: "#788eec",
         fontWeight: "bold",
         fontSize: 16
+    },
+    LinkText:{
+        fontSize: 16,
+        marginBottom: 20,
+        textAlign: 'center'
     }
 })

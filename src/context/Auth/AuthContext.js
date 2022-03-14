@@ -79,6 +79,7 @@ export const AuthenticationContextProvider = ({ children }) => {
                 handleSignUp,
                 handleSignIn,
                 signOutUser,
+       
             }}
         >
             {children}

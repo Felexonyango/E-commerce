@@ -24,6 +24,30 @@ export default function DrawerContainer({navigation}) {
             navigation.closeDrawer();
           }}
         />
+            <MenuButton
+          title="Account"
+          // source={require("../../../assets/icons/home.png")}
+          onPress={() => {
+            navigation.navigate("Account");
+            navigation.closeDrawer();
+          }}
+        />
+               <MenuButton
+          title=" Cart"
+          // source={require("../../../assets/icons/home.png")}
+          onPress={() => {
+            navigation.navigate("Cart");
+            navigation.closeDrawer();
+          }}
+        />
+             <MenuButton
+          title="Setting"
+          // source={require("../../../assets/icons/home.png")}
+          onPress={() => {
+            navigation.navigate("Setting");
+            navigation.closeDrawer();
+          }}
+        />
         
     
           <MenuButton 

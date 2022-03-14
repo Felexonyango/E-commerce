@@ -28,3 +28,6 @@ export function signUp(email, password) {
 export  function  logout(){
   return signOut(auth)
 }
+export  function Forgot(email){
+  return sendPasswordResetEmail(auth,email)
+}
