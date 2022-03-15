@@ -1,21 +1,22 @@
-import React,{useState} from "react";
-import { View,StyleSheet } from "react-native";
+import React from "react";
+import { View,} from "react-native";
 import PropTypes from "prop-types";
 import styles from  "./styles"
 import MenuButton from "../MenuButton/MenuButton"
 import { logout } from "../../firebase/config";
 
-
 export default function DrawerContainer({navigation}) {
- 
+
   const signOutUser = () => {
    
         logout()  
 }
 
+
   return (
     <View style={styles.content}>
       <View style={styles.container}>
+       
         <MenuButton
           title="Home"
           source={require("../../../assets/icons/home.png")}

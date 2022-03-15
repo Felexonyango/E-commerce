@@ -36,6 +36,7 @@ export const AuthenticationContextProvider = ({ children }) => {
             name: user.name,
             email: user.email,
             uid: auth.currentUser.uid,
+     
         }).then(() => {
             alert("user created")
         }).catch((e) => {
@@ -63,9 +64,7 @@ export const AuthenticationContextProvider = ({ children }) => {
             console.log(error);
           }
 }
-   function getUser() {
-    return auth.user
-  }
+  
 
 
 
@@ -75,11 +74,11 @@ export const AuthenticationContextProvider = ({ children }) => {
                 
                 user,
                 isLoading,
-                getUser,
                 handleSignUp,
                 handleSignIn,
                 signOutUser,
-       
+             
+               
             }}
         >
             {children}

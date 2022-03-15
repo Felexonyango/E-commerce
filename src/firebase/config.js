@@ -31,3 +31,6 @@ export  function  logout(){
 export  function Forgot(email){
   return sendPasswordResetEmail(auth,email)
 }
+export function getuser(){
+  return auth.currentUser.displayName
+}
